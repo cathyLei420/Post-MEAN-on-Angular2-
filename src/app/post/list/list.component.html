@@ -1,0 +1,19 @@
+<div class= "container">
+  <table class="table">
+    <tr>
+      <th>User</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+    <tr *ngFor = "let post of posts, let i = index">
+        <td>{{post.user}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.description}}</td>
+        <td>
+          <button class="btn btn-danger" (click) = "delete(post.id)">Delete</button>
+          <button class="btn" ><a [routerLink] = "['/comment', post.id]">Details</a></button>
+        </td>
+      </tr>
+  </table>
+</div>

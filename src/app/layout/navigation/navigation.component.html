@@ -1,0 +1,10 @@
+<div class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+    <li><a href="#" [routerLink] = '["/home"]' *ngIf = 'hide'>Home</a></li>
+    <li><a href="#" [routerLink] = '["/login"]' *ngIf = '!hide'>Login</a></li>
+    <li><a href="#" [routerLink] = '["/register"]' *ngIf = '!hide'>Register</a></li>
+    <li><a href="#" [routerLink] = '["/create"]' *ngIf = 'hide'>Create</a></li>
+    <li><a href="#" [routerLink] = '["/list"]' *ngIf = 'hide'>List</a></li>
+    <li><a href="#" [routerLink] = '["/login"]' (click)="logout()" *ngIf = 'hide'>Logout</a></li>
+  </ul>
+</div>

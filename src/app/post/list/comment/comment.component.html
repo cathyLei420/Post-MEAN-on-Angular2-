@@ -1,0 +1,23 @@
+<div>
+    <button class="btn btn-warning" [class.disabled]="isClickedOnce" (click)="like()">Like</button>
+    <p *ngFor="let l of liked">{{l}}</p>
+    <br /><br />
+    <table class="table table-striped">
+      <tr>
+        <th>User</th>
+        <th>Content</th>
+      </tr>
+      <tr *ngFor = "let cmnt of postcomments">
+        <td>{{cmnt.user}}</td>
+        <td>{{cmnt.content}}</td>
+      </tr>
+    </table>
+    <form class="form">
+      <div class="form-group">
+        <label>Comment</label>
+        <input type="text" name="comment" class="form-control" [(ngModel)]="newcomment.content">
+      </div>
+      <button class="btn btn-primary" (click)="saveComment()">Save</button>
+      <button class="btn btn-secondary" [routerLink] = "['/list']">Back</button> 
+    </form>
+</div>
