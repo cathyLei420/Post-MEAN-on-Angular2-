@@ -1,7 +1,9 @@
 # Post-MEAN-on-Angular2-
 
 This application let user to operate post.
+
 It has components below,
+
   Login : displays login form
   
   Registration : displays registration form
